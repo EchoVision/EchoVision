@@ -68,3 +68,4 @@ fastlane/test_output
 # other
 
 .DS_Store
+EchoVision/opencv2.framework/*
