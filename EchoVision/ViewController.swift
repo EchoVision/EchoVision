@@ -9,10 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var camera: CVVideoCamera!
+    
+    @IBOutlet weak var frame: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        camera = CVVideoCamera(controller: self, andImageView: frame)
     }
 
     override func didReceiveMemoryWarning() {

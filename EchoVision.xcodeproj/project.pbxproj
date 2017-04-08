@@ -14,6 +14,9 @@
 		870308EA1E997195009B4E76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 870308E91E997195009B4E76 /* Assets.xcassets */; };
 		870308ED1E997195009B4E76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 870308EB1E997195009B4E76 /* LaunchScreen.storyboard */; };
 		870308F81E997196009B4E76 /* EchoVisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870308F71E997196009B4E76 /* EchoVisionTests.swift */; };
+		870CA38A1E9988BD008B9800 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 870CA3891E9988BD008B9800 /* OpenCVWrapper.mm */; };
+		870CA38D1E9993C3008B9800 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870CA38C1E9993C3008B9800 /* opencv2.framework */; };
+		870CA3901E999B70008B9800 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870CA38F1E999B70008B9800 /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,11 @@
 		870308F31E997196009B4E76 /* EchoVisionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EchoVisionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		870308F71E997196009B4E76 /* EchoVisionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoVisionTests.swift; sourceTree = "<group>"; };
 		870308F91E997196009B4E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		870CA3881E9988BD008B9800 /* EchoVision-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EchoVision-Bridging-Header.h"; sourceTree = "<group>"; };
+		870CA3891E9988BD008B9800 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		870CA38B1E9988E4008B9800 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		870CA38C1E9993C3008B9800 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		870CA38F1E999B70008B9800 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				870CA3901E999B70008B9800 /* AssetsLibrary.framework in Frameworks */,
+				870CA38D1E9993C3008B9800 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +74,7 @@
 				870308DE1E997195009B4E76 /* EchoVision */,
 				870308F61E997196009B4E76 /* EchoVisionTests */,
 				870308DD1E997195009B4E76 /* Products */,
+				870CA38E1E999B6F008B9800 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +97,10 @@
 				870308EB1E997195009B4E76 /* LaunchScreen.storyboard */,
 				870308EE1E997195009B4E76 /* Info.plist */,
 				870308E61E997195009B4E76 /* EchoVision.xcdatamodeld */,
+				870CA3891E9988BD008B9800 /* OpenCVWrapper.mm */,
+				870CA38B1E9988E4008B9800 /* OpenCVWrapper.h */,
+				870CA3881E9988BD008B9800 /* EchoVision-Bridging-Header.h */,
+				870CA38C1E9993C3008B9800 /* opencv2.framework */,
 			);
 			path = EchoVision;
 			sourceTree = "<group>";
@@ -97,6 +112,14 @@
 				870308F91E997196009B4E76 /* Info.plist */,
 			);
 			path = EchoVisionTests;
+			sourceTree = "<group>";
+		};
+		870CA38E1E999B6F008B9800 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				870CA38F1E999B70008B9800 /* AssetsLibrary.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +172,7 @@
 				TargetAttributes = {
 					870308DB1E997195009B4E76 = {
 						CreatedOnToolsVersion = 8.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					870308F21E997196009B4E76 = {
@@ -204,6 +228,7 @@
 			files = (
 				870308E81E997195009B4E76 /* EchoVision.xcdatamodeld in Sources */,
 				870308E21E997195009B4E76 /* ViewController.swift in Sources */,
+				870CA38A1E9988BD008B9800 /* OpenCVWrapper.mm in Sources */,
 				870308E01E997195009B4E76 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +284,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -309,7 +334,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -343,10 +368,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EchoVision",
+				);
 				INFOPLIST_FILE = EchoVision/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.EchoVision.EchoVision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EchoVision/EchoVision-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -355,10 +387,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EchoVision",
+				);
 				INFOPLIST_FILE = EchoVision/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.EchoVision.EchoVision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EchoVision/EchoVision-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -410,6 +448,7 @@
 				870308FE1E997196009B4E76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		870308FF1E997196009B4E76 /* Build configuration list for PBXNativeTarget "EchoVisionTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +457,7 @@
 				870309011E997196009B4E76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
